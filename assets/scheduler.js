@@ -14,3 +14,20 @@ firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
 
 console.log(database);
+
+//   let spaceshipName;
+//   let destination;
+//   let spaceshipTime;
+//   let frequency;
+
+$(document).on("click", "#submission", function (event) {
+    event.preventDefault();
+    let spaceshipData = {
+        name: $("#spaceship-name").val().trim(),
+        role: $("#destination").val().trim(),
+        startDate: $("#spaceship-time").val().trim(),
+        rate: parseInt($("#frequency").val().trim()),
+    }
+
+    // database.ref().set(spaceshipData);
+});
