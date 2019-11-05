@@ -8,7 +8,8 @@
     <title>Spaceship Scheduler</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style.css">
 
 </head>
@@ -35,8 +36,33 @@
         </thead>
     </table>
 
+    <!--THIS IS THE INPUT FIELD FOR THE TRANSPORTATION-->
+    <form class="border border-primary mb-4">
+        <div class="card-header border border-primary p-3 mb-2 bg-primary text-white font-weight-bold">
+            <span>Add Spaceship</span>
+        </div>
+        <div class="form-group pl-3 pr-3 font-weight-bold">
+            <label for="name">Spaceship Name</label>
+            <input type="name" class="form-control" id="spaceship-name">
+        </div>
+        <div class="form-group pl-3 pr-3 font-weight-bold">
+            <label for="destination">Destination</label>
+            <input type="name" class="form-control" id="destination">
+        </div>
+        <div class="form-group pl-3 pr-3 font-weight-bold">
+            <label for="time">First Spaceship Time (HH:mm - Military Time)</label>
+            <input type="HH:mm" class="form-control" id="spaceship-time">
+        </div>
+        <div class="form-group pl-3 pr-3 font-weight-bold">
+            <label for="frequency">Frequency (min)</label>
+            <input type="number" class="form-control" id="frequency">
+        </div>
+        <button type="submit" class="btn btn-primary m-3 font-weight-bold" id="submission">Submit</button>
+    </form>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="assets/scheduler.js"></script>
 
 </body>
