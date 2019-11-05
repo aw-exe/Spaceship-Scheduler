@@ -30,4 +30,13 @@ $(document).on("click", "#submission", function (event) {
     }
 
     // database.ref().set(spaceshipData);
+
+    console.log(spaceshipData);
+
+    database.ref().push(spaceshipData);
+
+    $("#spaceship-name").val("");
+    $("#destination").val("");
+    $("#spaceship-time").val("");
+    $("#frequency").val("");
 });
