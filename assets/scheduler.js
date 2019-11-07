@@ -25,7 +25,7 @@ $(document).on("click", "#submission", function (event) {
     let spaceshipData = {
         spaceshipName: $("#spaceship-name").val().trim(),
         destination: $("#destination").val().trim(),
-        spaceshipTime: $("#spaceship-time").val().trim(),
+        spaceshipArrival: $("#spaceship-arrival").val().trim(),
         frequency: parseInt($("#frequency").val().trim()),
     }
 
@@ -37,7 +37,7 @@ $(document).on("click", "#submission", function (event) {
 
     $("#spaceship-name").val("");
     $("#destination").val("");
-    $("#spaceship-time").val("");
+    $("#spaceship-arrival").val("");
     $("#frequency").val("");
 });
 
@@ -45,12 +45,14 @@ database.ref().on("child_added", function (childSnapshot) {
     console.log(childSnapshot.val());
     console.log(childSnapshot.val().spaceshipName);
     console.log(childSnapshot.val().destination);
-    console.log(childSnapshot.val().spaceshipTime);
+    console.log(childSnapshot.val().spaceshipArrival);
     console.log(childSnapshot.val().frequency);
 
-    const newTime = moment(childSnapshot.val().spaceshipTime, "HH:mm");
-    const convertedTime = newTime.format("HH:mm");
+    // const newTime = moment(childSnapshot.val().spaceshipTime, "HH:mm");
+    // const convertedTime = newTime.format("HH:mm");
 
-    $("#table").append("<tr><td>" + childSnapshot.val().spaceshipName + "</td><td>" + childSnapshot.val().destination + "</td><td>" + spaceshipTime + "</td><td>" + frequency + "</td>");
+    // $("#table").append("<tr><td>" + childSnapshot.val().spaceshipName + "</td><td>" + childSnapshot.val().destination + "</td><td>" + spaceshipTime + "</td><td>" + frequency + "</td>");
+    
+    $("#table").append("<tr><td>" + childSnapshot.val().spaceshipName + "</td><td>" + childSnapshot.val().destination + "</td><td>" + frequency + "</td>");
 
 });
