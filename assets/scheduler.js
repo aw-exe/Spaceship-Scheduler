@@ -51,7 +51,15 @@ database.ref().on("child_added", function (childSnapshot) {
     const newTime = moment(childSnapshot.val().spaceshipTime, "HH:mm");
     const convertedTime = newTime.format("HH:mm");
 
-    
+
+    // var now = moment();
+    // let timeDifference = moment(convertedTime);
+    // let spaceshipArrival = now.diff(timeDifference, 'minutes')
+    // let minutesAway = spaceshipArrival - childSnapshot.val().frequency;
+
+    // console.log(minutesAway);
+    // console.log(now.diff(timeDifference, 'minutes'));
+
     $("#table").append("<tr><td>" + childSnapshot.val().spaceshipName + "</td><td>" + childSnapshot.val().destination + "</td><td>" + childSnapshot.val().frequency + "</td><td>" + childSnapshot.val().spaceshipArrival) + "</td>";
 
 });
