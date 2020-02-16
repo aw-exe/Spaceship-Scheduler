@@ -6,7 +6,7 @@ This was my seventh assignment of the boot camp, we were to build a scheduler us
 
 Click on link below to open in your browser.
 
- https://aw-exe.github.io/GifTastic/
+https://aw-exe.github.io/Spaceship-Scheduler/
 
 ## Built With
 
